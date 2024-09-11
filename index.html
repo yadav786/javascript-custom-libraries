@@ -11,5 +11,47 @@
         <h2>CLICK</h2>
     </div>
     <script src="./jQuery.js"></script>
+    <input type="text" value="debouncing" onkeyup="betterFunction()" />
+    <div>Window resize for throttling</div>
+    <script>
+        let counter = 0;
+        const getData = () => {
+            console.log(counter++);
+        }
+        const debounce = function(fn, d) {
+            let timer;
+            return function() {
+                if(timer) {
+                    clearTimeout(timer);
+                }
+                const context = this;
+                const args = arguments;
+                timer = setTimeout(() => {
+                    fn.apply(context, args);
+                }, d)
+            }
+        }
+        const throttle = function(fn, d) {
+            let flag = true;
+            return function() {
+                const context = this;
+                const args = arguments;
+                if(flag) {
+                    fn.apply(context, args);
+                    flag = false;
+                    setTimeout(() => {
+                        flag = true;
+                    }, d)
+                }
+            }
+        }
+        let throtCounter = 0;
+        const throttleData = () => {
+            console.log(throtCounter++);
+        }
+        const betterFunction = debounce(getData, 300);
+        const betterThrottleFunction = throttle(throttleData, 1000);
+        window.addEventListener("resize", betterThrottleFunction);
+    </script>
 </body>
 </html>

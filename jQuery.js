@@ -6,8 +6,8 @@
 const $ = function(selector) {
     const self = {
         element: document.querySelector(selector),
-        addClass : () => {
-            self.element.setAttribute('class', 'red');
+        addClass : (color) => {
+            self.element.setAttribute('class', color);
             return self;
         },
         attr: (id) => {
@@ -28,8 +28,8 @@ const $ = function(selector) {
     return self;
 }
 
-let button = $('div > button').attr(1).addClass().on('click');
-let button2 = $('div > button:nth-child(3)').attr(2).addClass().on('click');
+let button = $('div > button').attr(1).addClass('red').on('click');
+let button2 = $('div > button:nth-child(3)').attr(2).addClass('green').on('click');
 
 
 
