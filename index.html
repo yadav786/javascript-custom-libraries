@@ -2,6 +2,7 @@
 <head>
     <title>Customer JS Library</title>
     <link rel="stylesheet" type="text/css" href="./main.css" />
+    <link rel="stylesheet" type="text/css" href="./main2.css" />
 </head>
 <body>
     <div>
@@ -14,6 +15,24 @@
     <input type="text" value="debouncing" onkeyup="betterFunction()" />
     <div>Window resize for throttling</div>
     <script>
+        var input = { a: 10, b: 20, c: 30 }; 
+        sumValues(input);
+
+        function sumValues(obj) {
+            let sum = 0;
+            console.log(this.input);
+            Object.entries(obj).forEach(function([key, val]) {
+                    sum += val;
+            });
+            return sum;
+        }
+        const a = {};
+        const b = { key: 'b' }; 
+        const c = { key: 'c' };
+        a[b] = 123;
+        a[c] = 456; 
+        console.log(a[b]); // [Object Object]
+
         let counter = 0;
         const getData = () => {
             console.log(counter++);

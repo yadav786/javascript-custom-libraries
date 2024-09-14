@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+#board {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid grey;
+}
+
+
+#todo {
+    
+}
+
+#in-progress {
+
+}
+
+#done {
+
+}
+
+.status-board {
+    float: left;
+    width: calc(100%/3);
+}
+
+#board:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.status-board > div {
+    display: block;
+}
+
+@media screen and (max-width: 600px){
+   
+}
