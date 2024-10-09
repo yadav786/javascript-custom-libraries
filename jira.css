@@ -36,5 +36,7 @@
 }
 
 @media screen and (max-width: 600px){
-   
+   .status-board {
+        width: 100%;
+   }
 }

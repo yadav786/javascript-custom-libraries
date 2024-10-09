@@ -11,11 +11,12 @@
         <button>CLICK</button>
         <h2>CLICK</h2>
     </div>
-    <script src="./jQuery.js"></script>
-    <input type="text" value="debouncing" onkeyup="betterFunction()" />
+    <!-- <script src="./jQuery.js"></script> -->
+    <input type="text" id="debounce" value="debouncing"/>
     <div>Window resize for throttling</div>
     <script>
-        var input = { a: 10, b: 20, c: 30 }; 
+        /*
+         var input = { a: 10, b: 20, c: 30 }; 
         sumValues(input);
 
         function sumValues(obj) {
@@ -69,8 +70,45 @@
             console.log(throtCounter++);
         }
         const betterFunction = debounce(getData, 300);
-        const betterThrottleFunction = throttle(throttleData, 1000);
-        window.addEventListener("resize", betterThrottleFunction);
+        // const betterThrottleFunction = throttle(throttleData, 1000);
+        // window.addEventListener("resize", betterThrottleFunction);
+        */
+        /*
+        const obj = {
+            func: () => {
+                console.log(this.prop);
+            },
+            prop: 5
+        };
+        */
+  /*      const obj = {
+            func: function() {
+                let prop = 8;
+                console.log(this.prop);
+            },
+            prop: 5
+        };
+
+        obj.func.prop = 2;
+        obj.func(); // ???
+        // var prop = 6;
+        obj.func.call();
+        const fn = obj.func; // window object
+        fn(); // ???
+*/
+
+        // debugger;
+        /* const a = {};
+        (function func(b) {
+            b.с = 10;
+            b = null;
+            console.log(b);
+        })(a);
+        console.log(a);
+        */
+
+        
+
     </script>
 </body>
 </html>
