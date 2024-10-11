@@ -106,8 +106,64 @@
         })(a);
         console.log(a);
         */
+        debugger;
+        /*function mysteryFunction() {
+            console.log(x); // Step 1
+            var x = 20;
+            console.log(this.x); // Step 2
+            console.log(x); // Step 3
+        }
 
-        
+        x = 10;
+        mysteryFunction();
+        console.log(x); // Step 4
+        */
+/*
+        function Obj() {}
+        Obj.prototype.x = 10;
+
+        const obj1 = new Obj();
+        const obj2 = new Obj();
+
+        Obj.prototype = { x: 20 };
+        const obj3 = new Obj();
+
+        console.log(obj1.x, obj2.x, obj3.x);
+
+        Obj.prototype.x = 30;
+        console.log(obj1.x, obj2.x, obj3.x);
+        */
+
+  /*      const object = {
+            message: 'Hello, World!',
+
+            logMessage() {
+                console.log('logged '+ this.message); // What is logged?
+            }
+        };
+
+        object.logMessage();
+        const obj = object.logMessage;
+        obj();
+        setTimeout(object.logMessage, 0);
+        setTimeout(() => object.logMessage(), 0);
+*/
+/*
+    a();
+    var a = function() {
+    console.log('function expression');
+    }
+
+    a();
+
+ function a() {
+    console.log('function statement/ declaration');
+    }
+
+    a();
+
+    */
+
 
     </script>
 </body>
